@@ -3,7 +3,7 @@ const app = express();
 const Razorpay = require("razorpay");
 const cors = require("cors");
 const dotenv = require('dotenv');
-const { products} = require("./data");
+const { products } = require("./data");
 
 
 
@@ -11,10 +11,10 @@ const PORT = process.env.PORT || 3000 ;
 
 const key_id = "rzp_test_MdGluNtTWCvuX9";
 const key_secret = "6KXQDPcq6R77mzBbjVmbOqHr";
-var instance = new Razorpay({
+const instance = new Razorpay({
   key_id,
   key_secret
-})
+});
 
 app.use(cors());
 dotenv.config();
@@ -26,9 +26,9 @@ app.get("/products", (req,res) => {
 
 app.get("/order/:productID", (req,res) => {
   const { productID } = req.params;
-  const product = products.find((product) => product.id = productID)
+  const product = products.find((product) => product.id == productID)
  const amount = product.price * 100 * 70;
- const currency = product.Currency;
+ const currency = "INR";
  const receipt = 'receipt#123';
  const notes = { desc: product.Description };
 instance.orders.create({amount, currency, receipt, notes}, (error, order) => {
