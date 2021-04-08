@@ -25,12 +25,12 @@ app.get("/products", (req,res) => {
 });
 
 app.get("/order/:productID", (req,res) => {
-  const { productID } = req.params;
-  const product = products.find((product) => product.id == productID)
- const amount = product.price * 100 * 70;
- const currency = "INR";
- const receipt = 'receipt#123';
- const notes = { desc: product.Description };
+const { productID } = req.params;
+const product = products.find((product) => products.id == productID)
+const amount = product.price * 100 * 70;
+const currency = "INR";
+const receipt = 'receipt#123';
+const notes = { desc: product.Description };
 instance.orders.create({amount, currency, receipt, notes}, (error, order) => {
   if (error) {
     return res.status(500).json(error);
