@@ -1,1 +1,1 @@
-(LIVEDEMO)[https://ecommerce-online-education.herokuapp.com/products]
+[LIVEDEMO](https://ecommerce-online-education.herokuapp.com/products)
