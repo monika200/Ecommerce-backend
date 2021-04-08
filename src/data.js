@@ -9,14 +9,14 @@ exports.products = [
 {
     id: 2,
     Name: "HTML for Begineers",
-    price: "0",
+    price: "20",
     Currency: "$",
     Description: "Discounted price"
 },
 {
     id: 3,
     Name: "CSS for Begineers",
-    price: "0",
+    price: "20",
     Currency: "$",
     Description: "Discounted price"
 },
