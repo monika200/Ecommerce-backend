@@ -9,8 +9,8 @@ const { products } = require("./data");
 
 const PORT = process.env.PORT || 3000 ;
 
-const key_id = "rzp_test_MdGluNtTWCvuX9";
-const key_secret = "6KXQDPcq6R77mzBbjVmbOqHr";
+const key_id = "rzp_test_0UrgJJ8O5WVe6e";
+const key_secret = "B82nhNkVpWbHgaUFWpmz1ChO";
 const instance = new Razorpay({
   key_id,
   key_secret
