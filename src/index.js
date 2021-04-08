@@ -24,9 +24,9 @@ app.get("/products", (req,res) => {
  res.status(200).json(products)
 });
 
-app.get("/order/:productID", (req,res) => {
-const { productID } = req.params;
-const product = products.find((product) => products.id == productID)
+app.get("/order/:productId", (req,res) => {
+const { productId } = req.params;
+const product = products.find((product) => product.id == productId)
 const amount = product.price * 100 * 70;
 const currency = "INR";
 const receipt = 'receipt#123';
